@@ -1,0 +1,52 @@
+div{
+    background-color: navy;
+    color: white;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 0 25px 0;
+    border-radius: 5px;
+    height: 250px;
+}
+
+input{
+    text-align: center
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px
+}
+
+.container, .containerCalculator, .buttonHome {
+    text-align: center
+}
+
+.containerCalculator {
+    height: 300px;
+    width: 800px;
+    padding: 30px
+}
+
+.containerCalculator input {
+    width: 150px;
+}
+
+.button, .buttonHome{
+    background-color: transparent;
+}
+
+body{
+    background-color: lightblue
+}
+
+button{
+    background-color: black;
+    color: white;
+    border-radius: 5px
+}

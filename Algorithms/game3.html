@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game 3. Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+        <div class="containerCalculator">
+                <h1>Calculator Game</h1>
+
+                <p><strong>Addition:</strong> <input id="number1Add" type="number" placeholder="Insert first number"> + <input id="number2Add" type="number" placeholder="Insert second number"> = <input id="number3Add" type="number" placeholder="Insert your guess">&nbsp; <button onclick="addition();">Calculate</button> &nbsp;<span id="addMsg"></span> </p>
+                <p><strong>Substraction:</strong> <input id="number1Subs" type="number" placeholder="Insert first number"> - <input id="number2Subs" type="number" placeholder="Insert second number"> = <input id="number3Subs" type="number" placeholder="Insert your guess"> &nbsp; <button onclick="substraction();">Calculate</button> &nbsp; <span id="subsMsg"></span> </p>
+                <p><strong>Multiplication:</strong> <input id="number1Mult" type="number" placeholder="Insert first number"> * <input id="number2Mult" type="number" placeholder="Insert second number"> = <input id="number3Mult" type="number" placeholder="Insert your guess"> &nbsp; <button onclick="multiplication();">Calculate</button> &nbsp; <span id="multMsg"></span> </p>
+                <p><strong>Division:</strong> <input id="number1Div" type="number" placeholder="Insert first number"> / <input id="number2Div" type="number" placeholder="Insert second number"> = <input id="number3Div" type="number" placeholder="Insert your guess"> &nbsp; <button onclick="division();">Calculate</button> &nbsp; <span id="divMsg"></span> </p>
+        </div>
+
+        <div class="button">
+                <a href="games.html">Go back to games</a>
+        </div>
+    
+        <script>
+            function addition(){
+                var addMsg = document.getElementById('addMsg');
+                var number1Add = parseInt(document.getElementById('number1Add').value);
+                var number2Add = parseInt(document.getElementById('number2Add').value);
+                var number3Add = parseInt(document.getElementById('number3Add').value);
+    
+                var addResult = number1Add + number2Add;
+    
+                if(addResult == number3Add){
+                    addMsg.innerHTML = "Good Job";
+                }else{
+                    addMsg.innerHTML = "Bad Job";                                
+                }
+    
+                if(!number1Add || !number2Add || !number3Add){
+                    addMsg.innerHTML = "";                                
+                }
+            }
+    
+            function substraction(){
+                var subsMsg = document.getElementById('subsMsg');
+                var number1Subs = parseInt(document.getElementById('number1Subs').value);
+                var number2Subs = parseInt(document.getElementById('number2Subs').value);
+                var number3Subs = parseInt(document.getElementById('number3Subs').value);
+    
+                var subsResult = number1Subs - number2Subs;
+    
+                if(subsResult == number3Subs){
+                    subsMsg.innerHTML = "Good Job";
+                }else{
+                    subsMsg.innerHTML = "Bad Job";                                
+                }
+    
+                if(!number1Subs || !number2Subs || !number3Subs){
+                    subsMsg.innerHTML = "";                                
+                }
+            }
+    
+            function multiplication(){
+                var multMsg = document.getElementById('multMsg');
+                var number1Mult = parseInt(document.getElementById('number1Mult').value);
+                var number2Mult = parseInt(document.getElementById('number2Mult').value);
+                var number3Mult = parseInt(document.getElementById('number3Mult').value);
+    
+                var multResult = number1Mult * number2Mult;
+    
+                if(multResult == number3Mult){
+                    multMsg.innerHTML = "Good Job";
+                }else{
+                    multMsg.innerHTML = "Bad Job";                                
+                }
+    
+                if(!number1Mult || !number2Mult || !number3Mult){
+                    multMsg.innerHTML = "";                                
+                }
+            }
+    
+            function division(){
+                var divMsg = document.getElementById('divMsg');
+                var number1Div = parseInt(document.getElementById('number1Div').value);
+                var number2Div = parseInt(document.getElementById('number2Div').value);
+                var number3Div = parseInt(document.getElementById('number3Div').value);
+    
+                var divResult = number1Div / number2Div;
+    
+                if(divResult == number3Div){
+                    divMsg.innerHTML = "Good Job";
+                }else{
+                    divMsg.innerHTML = "Bad Job";                                
+                }
+    
+                if(!number1Div || !number2Div || !number3Div){
+                    divMsg.innerHTML = "";                                
+                }
+            }
+        </script>
+    
+</body>
+</html>

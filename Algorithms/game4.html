@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game 4. Lottery Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="container">
+            <h1>Lottery Game</h1>
+
+            <p>Pick three numbers and see if you can guess the right combination!</p>
+        
+            <button onclick="one();">1</button>
+            <button onclick="two();">2</button>
+            <button onclick="three();">3</button>
+            <button onclick="four();">4</button>
+            <button onclick="five();">5</button>
+            <button onclick="totalReset();">Try Again</button>
+        
+            <p id="prize"></p>
+    </div>
+
+    <div class="button">
+            <a href="games.html">Go back to games</a>
+    </div>
+
+    <script>
+
+        var prize = document.getElementById('prize');
+        var counter = 0;
+        var array = [];
+
+        var array1 = [1,2,3];
+        var array2 = [3,2,1];
+        var array3 = [5,3,2];
+
+        console.log(JSON.stringify(array) === JSON.stringify(array1));
+
+        function one(){
+            counter++;
+            console.log(counter);
+            array.push(1);
+            console.log(array);
+
+            if(counter === 3){
+                lottery();
+                reset();
+            }
+        }
+
+        function two(){
+            counter++;
+            console.log(counter);
+            array.push(2);
+            console.log(array);
+            if(counter === 3){
+                lottery();
+                reset();
+            }
+        }
+
+        function three(){
+            counter++;
+            console.log(counter);
+            array.push(3);
+            console.log(array);
+            
+            if(counter === 3){
+                lottery();
+                reset();
+            }
+        }
+
+        function four(){
+            counter++;
+            console.log(counter);
+            array.push(4);
+            console.log(array);
+
+            if(counter == 3){
+                lottery();
+                reset();
+            }
+        }
+
+        function five(){
+            counter++;
+            console.log(counter);
+            array.push(5);
+            console.log(array);
+
+            if(counter === 3){
+                lottery();
+                reset();
+            }
+        }
+
+        function reset(){
+            counter = 0;
+            array= [];
+        }
+
+        function lottery(){
+            if(JSON.stringify(array) === JSON.stringify(array1)||JSON.stringify(array) === JSON.stringify(array2)||JSON.stringify(array) === JSON.stringify(array3)){
+                prize.innerHTML = "You won!"
+            }else{
+                prize.innerHTML = "You lost!"
+            }
+        }
+
+        function totalReset(){
+            counter = 0;
+            array= [];
+            prize.innerHTML = "";
+        }
+
+    </script>
+
+
+    
+
+</body>
+</html>
