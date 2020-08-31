@@ -7,7 +7,7 @@
     <title>About</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -53,9 +53,31 @@
     </nav>
 
     <body>
-        <h1 class="text-center">About</h1>
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">About</h1>
+                </div>
+                <div class="col-lg-12 text-center mb-2">
+                    <p>You can take a look at my resume:</p>
+
+                    <button id="showResume" class="btn btn-info">Show Resume</button>
+                    <button id="hideResume" class="btn btn-danger">Hide Resume</button>
+                </div>
+                <div class="col text-center">
+                    <iframe id="resume" src="https://drive.google.com/file/d/1c2GfPx88PhXeF477qarawpX9h_bPO_WT/preview"
+                        width="640" height="480"></iframe>
+                </div>
+            </div>
+        </div>
 
         <p class="bg-dark fixed-bottom text-light text-center font-weight-bold p-2 mt-4 mb-0">Made by Henry Herrera</p>
+
+        <script src="../js/script.js"></script>
 
     </body>
 
