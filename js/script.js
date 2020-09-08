@@ -4,7 +4,7 @@ let showResume = document.getElementById('showResume');
 let buttonMessage = document.getElementById('buttonMessage');
 let contactForm = document.getElementById('contactForm');
 let linkedInBadge = document.getElementById('linkedInBadge');
-
+let cancelButton = document.getElementById('cancelButton');
 
 if (resume) {
     showResume.onclick = () => {
@@ -23,8 +23,18 @@ if (resume) {
 if (buttonMessage) {
     buttonMessage.onclick = () => {
         contactForm.style.display = 'inline-block';
+        cancelButton.style.display = 'inline-block';
         contactForm.style.marginTop = '-50px';
         buttonMessage.style.display = 'none';
         linkedInBadge.style.display = 'none';
     }
+
+    cancelButton.onclick = () => {
+        contactForm.style.display = 'none';
+        cancelButton.style.display = 'none';
+        buttonMessage.style.display = 'inline-block';
+        linkedInBadge.style.display = 'inline-block';
+    }
+
+
 }
