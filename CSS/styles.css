@@ -1,4 +1,4 @@
-	#resume, #hideResume, #contactForm, #cancelButton{
+	#resume, #hideResume, #contactForm, #cancelButton, #responsiveImage{
 		display: none;
 	}
 
@@ -7,5 +7,30 @@
 	.name{
 		font-family: 'Dancing Script', cursive !important;
 	}
+
+	@media only screen and (max-width: 400px){
+		#responsiveImage{
+			display: block !important;
+		}
+
+		#normalImage{
+			display: none !important;
+		}
+	}
+
+	@media only screen and (min-width: 768px){
+		#responsiveImage{
+			display: none !important;
+		}
+
+		#normalImage{
+			display: block !important;
+		}
+	}
+
+
+
+
+	
 
 	
