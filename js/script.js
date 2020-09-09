@@ -5,6 +5,7 @@ let buttonMessage = document.getElementById('buttonMessage');
 let contactForm = document.getElementById('contactForm');
 let linkedInBadge = document.getElementById('linkedInBadge');
 let cancelButton = document.getElementById('cancelButton');
+let contactHeading = document.getElementById('contactHeading');
 
 if (resume) {
     showResume.onclick = () => {
@@ -27,6 +28,7 @@ if (buttonMessage) {
         contactForm.style.marginTop = '-50px';
         buttonMessage.style.display = 'none';
         linkedInBadge.style.display = 'none';
+        contactHeading.style.display = 'none';
     }
 
     cancelButton.onclick = () => {
@@ -34,6 +36,7 @@ if (buttonMessage) {
         cancelButton.style.display = 'none';
         buttonMessage.style.display = 'inline-block';
         linkedInBadge.style.display = 'inline-block';
+        contactHeading.style.display = 'block';
     }
 
 
