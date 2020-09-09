@@ -6,6 +6,8 @@ let contactForm = document.getElementById('contactForm');
 let linkedInBadge = document.getElementById('linkedInBadge');
 let cancelButton = document.getElementById('cancelButton');
 let contactHeading = document.getElementById('contactHeading');
+let normalImage = document.getElementById('normalImage');
+let responsiveImage = document.getElementById('responsiveImage');
 
 if (resume) {
     showResume.onclick = () => {
@@ -38,6 +40,19 @@ if (buttonMessage) {
         linkedInBadge.style.display = 'inline-block';
         contactHeading.style.display = 'block';
     }
-
-
 }
+
+window.onresize = () => {
+    if (normalImage || responsiveImage) {
+        if (screen.width < 768) {
+            normalImage.style.display = 'none';
+            responsiveImage.style.display = 'block';
+        } else if (screen.width > 768) {
+            normalImage.style.display = 'block';
+            responsiveImage.style.display = 'none';
+        }
+    }
+
+    // console.log("Hello");
+}
+
