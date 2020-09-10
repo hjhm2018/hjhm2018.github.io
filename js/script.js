@@ -42,6 +42,13 @@ if (buttonMessage) {
     }
 }
 
+if (screen.width < 768) {
+    if (normalImage || responsiveImage) {
+        normalImage.style.display = 'none';
+        responsiveImage.style.display = 'block';
+    }
+}
+
 window.onresize = () => {
     if (normalImage || responsiveImage) {
         if (screen.width < 768) {
