@@ -42,24 +42,24 @@ if (buttonMessage) {
     }
 }
 
-if (screen.width < 768) {
-    if (normalImage || responsiveImage) {
-        normalImage.style.display = 'none';
-        responsiveImage.style.display = 'block';
-    }
-}
+// if (screen.width < 768) {
+//     if (normalImage || responsiveImage) {
+//         normalImage.style.display = 'none';
+//         responsiveImage.style.display = 'block';
+//     }
+// }
 
-window.onresize = () => {
-    if (normalImage || responsiveImage) {
-        if (screen.width < 768) {
-            normalImage.style.display = 'none';
-            responsiveImage.style.display = 'block';
-        } else if (screen.width > 768) {
-            normalImage.style.display = 'block';
-            responsiveImage.style.display = 'none';
-        }
-    }
+// window.onresize = () => {
+//     if (normalImage || responsiveImage) {
+//         if (screen.width < 768) {
+//             normalImage.style.display = 'none';
+//             responsiveImage.style.display = 'block';
+//         } else if (screen.width > 768) {
+//             normalImage.style.display = 'block';
+//             responsiveImage.style.display = 'none';
+//         }
+//     }
 
-    // console.log("Hello");
-}
+//     // console.log("Hello");
+// }
 
